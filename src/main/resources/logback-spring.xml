@@ -40,7 +40,7 @@
     </appender>
 
     <logger name="net.unit8.kata" level="WARN" />
-    <logger name="tracing" level="INFO" />
+    <logger name="tracing" level="OFF" />
     <logger name="call-external" level="OFF" />
     <logger name="org.zalando.problem" level="OFF" />
 
