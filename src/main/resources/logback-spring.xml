@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg %mdc %n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="CONSOLE-JSON" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <jsonGeneratorDecorator class="net.logstash.logback.decorate.PrettyPrintingJsonGeneratorDecorator"/>
+            <providers>
+                <timestamp>
+                    <fieldName>timeStamp</fieldName>
+                    <timeZone>UTC</timeZone>
+                </timestamp>
+                <loggerName>
+                    <fieldName>logger</fieldName>
+                </loggerName>
+                <logLevel>
+                    <fieldName>level</fieldName>
+                </logLevel>
+                <threadName>
+                    <fieldName>thread</fieldName>
+                </threadName>
+                <mdc />
+                <message>
+                    <fieldName>message</fieldName>
+                </message>
+                <arguments>
+                    <includeNonStructuredArguments>false</includeNonStructuredArguments>
+                </arguments>
+                <stackTrace>
+                    <fieldName>stack</fieldName>
+                </stackTrace>
+            </providers>
+        </encoder>
+    </appender>
+
+    <logger name="net.unit8.kata" level="WARN" />
+    <logger name="tracing" level="INFO" />
+    <logger name="call-external" level="OFF" />
+    <logger name="org.zalando.problem" level="OFF" />
+
+    <root level="WARN">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>

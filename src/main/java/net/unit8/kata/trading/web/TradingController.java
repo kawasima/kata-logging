@@ -1,4 +1,4 @@
-package net.unit8.kata.trading;
+package net.unit8.kata.trading.web;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -3,7 +3,6 @@ package net.unit8.kata.shopping.persistence;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.List;
 
 @Entity
 @Table(name = "products")

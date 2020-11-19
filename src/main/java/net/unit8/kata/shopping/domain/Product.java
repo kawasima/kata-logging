@@ -2,7 +2,6 @@ package net.unit8.kata.shopping.domain;
 
 import javax.money.MonetaryAmount;
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 public class Product implements Serializable {
     private final String code;

@@ -1,6 +1,5 @@
 package net.unit8.kata.shopping.domain;
 
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.stereotype.Component;
 
